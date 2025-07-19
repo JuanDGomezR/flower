@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Rosas Animadas</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: black;
+        overflow: hidden;
+        height: 100%;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      canvas {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+
+      .card-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.5s ease-out;
+      }
+
+      .card-overlay.show {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 15px;
+        padding: 30px 40px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        max-width: 600px;
+        color: #333;
+        border: 2px solid #ff6699;
+        position: relative;
+      }
+
+      .card h1 {
+        color: #ff0066;
+        margin-top: 0;
+        font-size: 2.5em;
+        letter-spacing: 1px;
+      }
+
+      .card p {
+        font-size: 1.2em;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .card .signature {
+        font-size: 1.1em;
+        font-style: italic;
+        color: #666;
+        margin-top: 30px;
+      }
+
+      .toggle-button {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 3;
+        padding: 12px 25px;
+        font-size: 1.1em;
+        background-color: #ff0066;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .toggle-button:hover {
+        background-color: #e6005c;
+        transform: translateX(-50%) translateY(-3px);
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+
+    <div id="cardOverlay" class="card-overlay">
+      <div class="card">
+        <h1>¡Para ti, Princesa!</h1>
+        <p>
+          Por más que te miro a los ojos, estoy más que seguro de que eres la
+          mujer que deseo por el resto de mi vida. Gracias por todos los
+          momentos vividos y por los que viviremos en el futuro, si Dios lo
+          permite. Te amo de una manera que no tiene forma de describirse, pero
+          de todas maneras, quiero ser el hombre que te ame de todas las formas
+          y maneras posibles.
+        </p>
+        <p class="signature">Con cariño,<br />Tu morenito lindo jijiji.</p>
+      </div>
+    </div>
+
+    <button id="toggleCardBtn" class="toggle-button">Ver Mensaje</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
