@@ -103,9 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       const response = await fetch(jsonFile);
       if (!response.ok) {
-        console.error(
-          `Error HTTP! estado: ${response.status}. Asegúrate de que 'rosas.json' existe y el servidor local está corriendo.`
-        );
+        console.error(`Error HTTP! estado: ${response.status}.`);
         return;
       }
       originalRegionsData = await response.json();

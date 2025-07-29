@@ -90,57 +90,46 @@ body {
   transform: translateX(-50%) translateY(-3px);
 }
 
-/* Estilo para el contenedor <button> con la clase .botoni */
 .botoni {
-  /* Reinicia estilos por defecto del navegador para el botón */
   background: none;
   border: none;
   padding: 0;
   margin: 0;
-  font: inherit; /* Hereda la fuente del body */
-  cursor: pointer; /* Muestra el cursor de "manita" al pasar por encima */
+  font: inherit;
+  cursor: pointer;
 
-  /* Colores y forma del botón */
-  background-color: #3498db; /* Un azul bonito y vibrante */
-  border-radius: 8px; /* Bordes redondeados */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  background-color: #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-  /* Transiciones para efectos suaves al interactuar */
   transition: background-color 0.3s ease, transform 0.2s ease,
     box-shadow 0.3s ease;
-
-  /* Para posicionar el botón. Puedes ajustar margin-top si está encima o debajo del canvas. */
-  /* display: block; y margin: auto lo centran horizontalmente. */
   display: block;
-  margin-top: 20px; /* Margen superior para separarlo del contenido anterior */
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* Estilo para el enlace <a> dentro del botón con la clase .botoni */
 .botoni a {
-  /* Hace que el enlace ocupe todo el espacio del botón */
   display: block;
-  padding: 15px 30px; /* Relleno interno para el texto del enlace */
+  padding: 15px 30px;
 
-  color: white; /* Texto blanco */
-  text-decoration: none; /* Quitar el subrayado del enlace */
-  font-size: 18px; /* Tamaño de fuente */
-  font-weight: bold; /* Texto en negrita */
-  text-align: center; /* Centrar el texto */
-  line-height: 1; /* Asegura un espaciado consistente */
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
 }
 
-/* Efectos al pasar el ratón por encima del <button> con la clase .botoni */
 .botoni:hover {
-  background-color: #2980b9; /* Un azul un poco más oscuro al pasar el ratón */
-  transform: translateY(-2px); /* Ligeramente hacia arriba */
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Sombra un poco más pronunciada */
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Efecto al hacer clic en el <button> con la clase .botoni */
 .botoni:active {
-  background-color: #2c3e50; /* Un azul muy oscuro/casi negro al hacer clic */
-  transform: translateY(0); /* Vuelve a su posición original */
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); /* Sombra más pequeña */
+  background-color: #2c3e50;
+  transform: translateY(0);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
 }
